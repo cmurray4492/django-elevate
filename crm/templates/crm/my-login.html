@@ -1,4 +1,5 @@
 {% extends 'crm/base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +9,13 @@
 </head>
 <body>
     {% block content %}
-        <h3>Register Here</h3>
-        <p>This is where you can create your profile.</p>
+        <h3>Login Here</h3>
+        <p>This is whewre you cna log into your account.</p>
         <hr>
         <form method="POST" enctype="multipart/form-data" autocomplete="off">
             {% csrf_token %}
-            {{Registration.as_p}} 
-            <input type="submit" value="Create account" />
+            {{ LoginForm.as_p }}
+            <input type="submit" value="Login" />
         </form>
     {% endblock %}
 </body>
